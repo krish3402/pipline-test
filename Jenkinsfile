@@ -3,13 +3,13 @@ pipeline {
 	stages {
 		stage('dev') {
 			steps {
-				echo "development"
+				git 'https://github.com/krish3402/maven-multi-modules.git'
 			}
 		}
 		
 		stage('Test') {
 			steps {
-				echo "Test"
+				bat label: '', script: 'mvn clean deploy'
 			}
 		}
 		stage('Prod') {
