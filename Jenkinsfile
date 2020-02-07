@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'slave12'
+      label 'slave12,docker-slave'
     }
 
   }
