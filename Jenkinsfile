@@ -1,6 +1,7 @@
 pipeline {
   agent {
-    label 'docker-slave' 'slave12'
+    label 'docker-slave'
+    label 'slave12'
   }
   stages {
     stage('dev') {
