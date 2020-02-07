@@ -12,7 +12,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''sudo apt-get install nginx -y
-service nginx stop'''
+sudo service nginx stop'''
       }
     }
 
