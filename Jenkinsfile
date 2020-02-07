@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('dev') {
       steps {
-        sh 'mkdir -p /home/ubuntu/krish'
+        sh 'mkdir -p /home/ubuntu/krish1'
       }
     }
 
