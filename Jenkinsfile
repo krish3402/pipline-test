@@ -1,9 +1,9 @@
 pipeline {
-	agent any
+	agent {label 'docker-slave'}
 	stages {
 		stage('dev') {
 			steps {
-				echo "development"
+				sh 'mkdir /home/ubuntu/krish'
 			}
 		}
 		
