@@ -1,21 +1,25 @@
 pipeline {
-	agent {label 'docker-slave'}
-	stages {
-		stage('dev') {
-			steps {
-				sh 'mkdir /home/ubuntu/krish'
-			}
-		}
-		
-		stage('Test') {
-			steps {
-				echo "Test"
-			}
-		}
-		stage('Prod') {
-			steps {
-			         echo "Production"
-			}
-		}
-	}	
+  agent {
+    label 'docker-slave'
+  }
+  stages {
+    stage('dev') {
+      steps {
+        sh 'mkdir /home/ubuntu/krish'
+      }
+    }
+
+    stage('Test') {
+      steps {
+        sh 'sudo apt-get install nginx -y'
+      }
+    }
+
+    stage('Prod') {
+      steps {
+        echo 'Production'
+      }
+    }
+
+  }
 }
